@@ -43,7 +43,12 @@ colors.setTheme({
 lolcatjs.options.seed = Math.round(Math.random() * 1000)
 lolcatjs.options.colors = true
 function welcome(done) {
-  lolcatjs.fromString('Starting tasks.........')
+	let starting = figlet.textSync('starting tasks...', {
+    font: 'speed',
+    horizontalLayout: 'default',
+    verticalLayout: 'default'
+	})
+	lolcatjs.fromString(`${starting}`);
   done()
 }
 function sassCompile(done) {
@@ -151,12 +156,12 @@ function watchFiles(done) {
 }
 function getStarted(done) {
   lolcatjs.fromString(`You are working on ${packageJSON.name}, version: ${packageJSON.version}, by ${packageJSON.author}`);
-	let message = figlet.textSync('LETS GO!', {
+	let leggo = figlet.textSync('LETS GO!', {
     font: 'Dancing Font',
     horizontalLayout: 'full',
     verticalLayout: 'full'
 	})
-	lolcatjs.fromString(`${message}`);
+	lolcatjs.fromString(`${leggo}`);
   done()
 }
 const build = series(sassCompile, jsCompile, imgCompress)

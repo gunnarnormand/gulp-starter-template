@@ -1,6 +1,8 @@
-## Gulp 4 Starter template
+# Gulp 4 Starter template
 
-# instructions
+##  🤠 Yeehaw
+
+### instructions
 
 __in terminal cd to project directory and run:__
 
