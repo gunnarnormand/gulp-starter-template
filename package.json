@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+"
+    "url": "git+https://github.com/gunnarnormand/gulp-starter-template.git"
   },
   "author": "Gunnar Normand",
   "license": "MIT",
   "bugs": {
-    "url": "/issues"
+    "url": "https://github.com/gunnarnormand/gulp-starter-template.git/issues"
   },
-  "homepage": "/readme",
+  "homepage": "https://github.com/gunnarnormand/gulp-starter-template.git/readme",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
