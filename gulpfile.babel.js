@@ -108,7 +108,6 @@ function jsCompile(done) {
         console.log(`JavaScript Errors: `.prompt + `${results.errorCount}`.error)
     }))
     .pipe(plumber())
-    .pipe(sourcemaps.init())
     .pipe(babel({
         presets: ['@babel/env']
     }))
@@ -116,6 +115,7 @@ function jsCompile(done) {
       console.warn(`[JS Babel Error] ${err.message}`.error)
     })
     .pipe(concat('bundle.js'))
+		.pipe(sourcemaps.init())
     .pipe(minify({
       ext:{
            min:'.min.js'
