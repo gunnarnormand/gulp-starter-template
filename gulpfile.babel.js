@@ -82,7 +82,6 @@ function sassCompile(done) {
 		.pipe(dest(paths.dest.css))
     .pipe(rename({extname: '.min.css'}))
     .pipe(postcss([autoprefixer({
-            browsers: ['last 2 versions'],
             cascade: false
         }), cssnano()]))
     .pipe(sourcemaps.write('./'))
